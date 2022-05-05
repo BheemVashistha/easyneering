@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Easyneering-Text2Handwriting</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo1.png" alt="Easyneering.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Other Tools</a></li>
+            <li class="item"><a href="#client-section">Instructions</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">Welcome to Easyneering</h1>
+        <p>Hello Gyus with the help of this website you can convert text to an image that looks like Handwriting. </p>
+        <p>I hate writing assignments so I made this tool that can change any text similer to handwriting.</p>
+        <a href="/text-to-handwriting-master/index.html" target="_blank"><button class="btn" >Click Here To Convert</button></a>
+    </section>
+
+    <section id="services-container">
+        <h1 class="h-primary center">Other Tools</h1>
+        <div id="services">
+            <div class="box">
+                <img src="img/word-to-pdf.png" alt="">
+                <h2 class="h-secondary center">WORD TO PDF</h2>
+                <p class="center">Sorry!! But At this time you can't use this tool. We are working on this section. Until then try our text to handwriting service. Soon, We will update this website . After some time you can use this tool. Thanks for your patience. </p>
+            </div>
+            <div class="box">
+                <img src="img/Convert-PPT-to-PDF.png" alt="">
+                <h2 class="h-secondary center">PPT TO PDF</h2>
+                <p class="center">
+                    Sorry!! But At this time you can't use this tool. We are working on this section. Until then try our text to handwriting service. Soon, We will update this website . After some time you can use this tool. Thanks for your patience. </p>
+            </div>
+            <div class="box">
+                <img src="img/combine-to-pdf-rating.png" alt="">
+                <h2 class="h-secondary center">MERGE PDF</h2>
+                <p class="center"> Sorry!! But At this time you can't use this tool. We are working on this section. Until then try our text to handwriting service. Soon, We will update this website . After some time you can use this tool. Thanks for your patience. </p>
+            </div>
+        </div>
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">Instructions</h1>
+        <div id="clients">
+            <div>
+                <p style="font-size: larger;background-color:whitesmoke; border: 2px solid black;">IMP : In Dark Mode website is not working properly so please avoid the use of dark mode.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="process.php" method="POST" onsubmit="return validation()">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="fullName" required id="name" placeholder="Enter your name">
+                    <span id="wname" style="color: rgb(190, 9, 9);"> </span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="emailAddress" required id="email" placeholder="Enter your email">
+                    <span id="wemail" style="color: rgb(190, 9, 9);"> </span>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="phone" name="phoneNumber" required id="phone" placeholder="Enter your phone">
+                    <span id="wphone" style="color: rgb(190, 9, 9);"> </span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" required id="message" cols="30" rows="10"></textarea>
+                    <span id="wmsg" style="color: rgb(190, 9, 9);"> </span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Send" id="send" name="submit">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        function validation(){
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var msg = document.getElementById('message').value;
+            
+            if((name.length<=2) || (name.length>20)){
+                document.getElementById('wname').innerHTML="*Name length must be between 2 and 20";
+                return false;
+            }
+            if(!isNaN(name)){
+                document.getElementById('wname').innerHTML="*Only Characters are allowed";
+                return false;
+            }
+            if(isNaN(phone)){
+                document.getElementById('wphone').innerHTML="*Enter a valid mobile number";
+                return false;
+            }
+            if(phone.length!=10){
+                document.getElementById('wphone').innerHTML="*Enter a valid mobile number";
+                return false;
+            }
+            if(msg.length>20){
+                document.getElementById('wmsg').innerHTML="*Only 20 Charcters are allowed";
+                return false;
+            }
+        }
+    </script>
+
+    <footer>
+        <div class="center">
+            Copyright &copy; www.Easyneering.com. All rights reserved!<br>
+            <button class="button"><a href="https://www.instagram.com/its_bheemvashistha/" class="github" target="_blank">Made with 💖 By Bhim</a></button> 
+        </div>
+    </footer>
+</body>
+
+</html>
